@@ -27,3 +27,25 @@ pub fn print_in_for_loop(num: i32) {
         println!("i love alina {x} times");
     }
 }
+
+//both continue and break can take a label argument which is used to break out of a specific loop -> i.e. nested loops
+pub fn nested_loops() {
+    'outer: for i in 0..10 {
+        for j in 0..10 {
+            if i == 5 && j == 5 {
+                break 'outer;
+            }
+        }
+    }
+}
+
+pub fn blocks() {
+    let z = 13;
+    let x = {
+        let y = 10;
+        println!("y: {y}");
+        z - y //no semicolon here returns the value, else it would return ()
+    };
+    println!("x: {x}");
+
+}

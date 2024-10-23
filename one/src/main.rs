@@ -1,9 +1,12 @@
+use collatz::calculate_collatz;
 use control_flow::{blocks, divide_in_loop, is_even, is_even_ternary, nested_loops, print_in_for_loop};
 use datatypes::only_take_u32;
 use fibonacci::calculate;
-use macros::{factorial, fizzbuzz};
+use macros::factorial;
 
 mod fibonacci;
+
+mod collatz;
 
 mod control_flow;
 
@@ -42,7 +45,7 @@ fn main() {
     factorial(5);
 
 
-    println!("this should panic");
+    println!("collatz sequence for 10: {}", calculate_collatz(10));
 }
 
 

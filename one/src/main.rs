@@ -1,4 +1,4 @@
-use control_flow::{is_even, is_even_ternary};
+use control_flow::{divide_in_loop, is_even, is_even_ternary, print_in_for_loop};
 use fibonacci::calculate;
 
 mod fibonacci;
@@ -37,6 +37,9 @@ fn main() {
 
     is_even_ternary(10);
 
+    let res = divide_in_loop(123);
+    print!("result of divide_in_loop function: {res}");
+    print_in_for_loop(10);
 }
 //functions = fn keyword, params, return type = "-> type"
 fn interproduct(a: i32, b: i32, c: i32) -> i32 {
